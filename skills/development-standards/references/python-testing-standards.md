@@ -149,7 +149,21 @@ def test_portfolio_value():
 
 ## Test Structure
 
-**File naming:** `test_*.py` mirroring source structure (`portfolio.py` → `test_portfolio.py`)
+**Directory layout:** Group test files by the package they cover. The `tests/` tree should mirror the production
+package structure, with one subdirectory per package when a project has multiple packages or subpackages.
+
+**File naming:** `test_*.py` mirroring source modules (`portfolio.py` → `test_portfolio.py`). For example:
+
+```text
+myapp/
+  core/models.py
+  strategies/nearest_car.py
+tests/
+  core/test_models.py
+  strategies/test_nearest_car.py
+```
+
+Top-level modules may keep their tests at the test root (`main.py` → `tests/test_main.py`).
 
 **Function naming:** `test_<function>_<scenario>`:
 ```python
