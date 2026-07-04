@@ -22,11 +22,11 @@ Read the appropriate reference file(s) based on your task. Reading multiple file
 
 ### For Writing or Reviewing Python Code
 
-**Read `references/coding-standards.md`**
+**Read `references/python-coding-standards.md`**
 
 ### For Writing or Reviewing Python Tests
 
-**Read `references/testing-standards.md`**
+**Read `references/python-testing-standards.md`**
 
 ## Applying the Standards
 
