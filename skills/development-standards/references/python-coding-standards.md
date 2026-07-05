@@ -19,6 +19,15 @@ Use linting rules provided by Pylint and correct linting errors before consideri
 python -m pylint <file_or_module>
 ```
 
+## Running Python Commands
+
+When using `uv` in the Codex sandbox, keep the cache inside the repository so commands do not require approval to access `~/.cache/uv`.
+
+```bash
+uv --cache-dir .uv-cache run pytest
+uv --cache-dir .uv-cache run python -m pylint <file_or_module>
+```
+
 ## Code Formatting
 
 Follow PEP8 with these specific exceptions:

@@ -28,6 +28,14 @@ Read the appropriate reference file(s) based on your task. Reading multiple file
 
 **Read `references/python-testing-standards.md`**
 
+### For Writing or Reviewing React + TypeScript Code
+
+**Read `references/react-coding-standards.md`**
+
+### For Writing or Reviewing React + TypeScript Tests
+
+**Read `references/react-testing-standards.md`**
+
 ## Applying the Standards
 
 1. **Identify your task** - Are you writing code, tests, or both?
