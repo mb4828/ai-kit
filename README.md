@@ -10,12 +10,12 @@ Open this repository directly when working with the linked Obsidian vault. Canon
 
 #### Local setup
 
-The `mattbrauner` vault shortcut and the direct-use `.agents/` adapter are intentionally ignored by Git. After cloning this repository for direct use, create them locally:
+The `vault` shortcut and the direct-use `.agents/` adapter are intentionally ignored by Git. After cloning this repository for direct use, create them locally:
 
 ```bash
 mkdir -p .agents
 ln -s ../skills .agents/skills
-ln -s "/absolute/path/to/your/vault" mattbrauner
+ln -s "/absolute/path/to/your/vault" vault
 ```
 
 If your vault lives elsewhere, replace the second command's source path with its absolute location. The tracked `.claude/skills/` adapters work once this repository is committed or cloned; the commands above are only for the local Codex adapter and private vault shortcut.
@@ -62,6 +62,6 @@ Keep reusable workflows in `skills/<skill-name>/SKILL.md`. Put detailed, domain-
 
 ## Obsidian vault
 
-The local `mattbrauner` shortcut points to the private Obsidian vault and is intentionally ignored by Git. Its shared agent workspace is `Cowork/`; durable context belongs in `Cowork/memory/`, and tasks are tracked in `Cowork/TASKS.md`.
+The local `vault` shortcut points to the private Obsidian vault and is intentionally ignored by Git. Its shared agent workspace is `Cowork/`; durable context belongs in `Cowork/memory/`, and tasks are tracked in `Cowork/TASKS.md`.
 
 Treat vault content as confidential. The vault's own `AGENTS.md` defines the write policy and note conventions.

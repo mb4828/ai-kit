@@ -22,7 +22,7 @@ audit_path() {
   local marker
 
   case "$path" in
-    mattbrauner/*|.DS_Store)
+    vault/*|.DS_Store)
       fail "local-only path is a commit candidate: $path"
       ;;
     .agents/*)

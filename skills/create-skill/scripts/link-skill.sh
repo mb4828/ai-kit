@@ -49,7 +49,7 @@ fi
 
 ensure_link "$claude_skills_dir/$skill_name" "$claude_target" "$skill_dir"
 
-vault_root="$repo_root/mattbrauner"
+vault_root="$repo_root/vault"
 if [ -d "$vault_root" ]; then
   ensure_link "$vault_root/.claude/skills/$skill_name" "$skill_dir" "$skill_dir"
 fi
