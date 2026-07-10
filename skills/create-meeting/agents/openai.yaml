@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create Meeting Note"
+  short_description: "Create a linked Obsidian meeting note."
+  default_prompt: "Create a meeting note for my upcoming conversation."

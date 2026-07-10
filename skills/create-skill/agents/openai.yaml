@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create Skill"
+  short_description: "Create a portable Codex and Claude skill."
+  default_prompt: "Create a new agent-neutral skill for this workspace."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research"
+  short_description: "Research technical topics into vault notes."
+  default_prompt: "Research a technical topic and create an R&D note."

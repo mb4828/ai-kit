@@ -1,0 +1,4 @@
+interface:
+  display_name: "Audit"
+  short_description: "Audit changes before committing."
+  default_prompt: "Audit the current changes for privacy, safety, and commit readiness."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Draft Email"
+  short_description: "Draft an email in Matt’s voice."
+  default_prompt: "Draft an email using Matt’s correspondence guidance."

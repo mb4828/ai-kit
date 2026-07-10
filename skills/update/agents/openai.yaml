@@ -1,0 +1,4 @@
+interface:
+  display_name: "Update Tasks and Memory"
+  short_description: "Triage tasks and memory gaps."
+  default_prompt: "Review current tasks and memory for updates."

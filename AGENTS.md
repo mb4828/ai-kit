@@ -9,3 +9,4 @@ A collection of resources for incorporating AI into my personal projects.
 ## Skills
 
 - Use `skills/development-standards/SKILL.md` for development standards before writing, reviewing, or refactoring code or tests.
+- Keep every canonical skill in `skills/`. When this repository is mounted as a project's `.agents/` directory, that directory becomes the project's canonical `.agents/skills/` library.

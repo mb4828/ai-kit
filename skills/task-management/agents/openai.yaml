@@ -1,0 +1,4 @@
+interface:
+  display_name: "Task Management"
+  short_description: "Manage the shared task list."
+  default_prompt: "Review and update my tasks."

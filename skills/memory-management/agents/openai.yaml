@@ -1,0 +1,4 @@
+interface:
+  display_name: "Memory Management"
+  short_description: "Maintain shared vault memory."
+  default_prompt: "Review and update my shared vault memory."
