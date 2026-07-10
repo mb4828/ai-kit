@@ -22,8 +22,13 @@ audit_path() {
   local marker
 
   case "$path" in
-    mattbrauner/*|.agents/*|.DS_Store)
+    mattbrauner/*|.DS_Store)
       fail "local-only path is a commit candidate: $path"
+      ;;
+    .agents/*)
+      if [ "$path" != ".agents/skills" ]; then
+        fail "unexpected path under .agents: $path"
+      fi
       ;;
   esac
 
