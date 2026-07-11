@@ -1,4 +1,0 @@
-interface:
-  display_name: "Manage Entities"
-  short_description: "Maintain people and organization notes."
-  default_prompt: "Create or update a person or organization entity note."

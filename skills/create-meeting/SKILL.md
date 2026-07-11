@@ -7,4 +7,4 @@ description: Create or prepare a structured Obsidian meeting note and maintain p
 2. Collect or infer the date, attendees, purpose, and one-line summary. Ask when a required field cannot be derived from context.
 3. Find the most recent related meeting note before writing. Create the new note in `Meetings/YYYY/` with the established filename, frontmatter, MOC link, and sections.
 4. Add a `Prev:` link when applicable and update only the prior related note to add its `Next:` link.
-5. Use `manage-entities` for missing People or Organization entities. Do not edit the live Tasks view or templates.
+5. Use `entity-management` for missing People or Organization entities. Do not edit the live Tasks view or templates.

@@ -1,5 +1,5 @@
 ---
-name: manage-entities
+name: entity-management
 description: Create or update lightweight People and Organization entity notes in Matt's Obsidian vault. Use when a person, company, institution, or group needs a `Cowork/People/` or `Cowork/Organizations/` page, or when an existing entity page needs factual context or contact detail updates.
 ---
 

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Entity Management"
+  short_description: "Maintain people and organization notes."
+  default_prompt: "Use $entity-management to create or update a person or organization entity note."
