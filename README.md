@@ -18,7 +18,7 @@ ln -s ../skills .agents/skills
 ln -s "/absolute/path/to/your/vault" vault
 ```
 
-If your vault lives elsewhere, replace the second command's source path with its absolute location. The tracked `.claude/skills/` adapters work once this repository is committed or cloned; the commands above are only for the local Codex adapter and private vault shortcut.
+If your vault lives elsewhere, replace the second command's source path with its absolute location. The tracked `.claude/skills` adapter works once this repository is committed or cloned; the commands above are only for the local Codex adapter and private vault shortcut.
 
 ### Project overlay with Git
 

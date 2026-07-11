@@ -42,12 +42,24 @@ ensure_link() {
 if [ "$(basename "$repo_root")" = ".agents" ]; then
   claude_skills_dir="$(dirname "$repo_root")/.claude/skills"
   claude_target="../../.agents/skills/$skill_name"
+  claude_skills_target="../.agents/skills"
 else
   claude_skills_dir="$repo_root/.claude/skills"
   claude_target="../../skills/$skill_name"
+  claude_skills_target="../skills"
 fi
 
-ensure_link "$claude_skills_dir/$skill_name" "$claude_target" "$skill_dir"
+if [ -L "$claude_skills_dir" ]; then
+  if [ "$(realpath "$claude_skills_dir")" != "$(realpath "$repo_root/skills")" ]; then
+    echo "Refusing to replace symlink: $claude_skills_dir" >&2
+    exit 1
+  fi
+elif [ ! -e "$claude_skills_dir" ]; then
+  mkdir -p "$(dirname "$claude_skills_dir")"
+  ln -s "$claude_skills_target" "$claude_skills_dir"
+else
+  ensure_link "$claude_skills_dir/$skill_name" "$claude_target" "$skill_dir"
+fi
 
 vault_root="$repo_root/vault"
 if [ -d "$vault_root" ]; then
