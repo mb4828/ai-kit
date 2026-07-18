@@ -140,7 +140,7 @@ If a library or schema already defines a shape, reference it — don't retype it
 - Before writing a "types" mirror of an API, check whether it already exports what you need.
 - Exception: if deriving the type takes an unreadable chain of transformations, a small local type may be clearer — but comment *why* it exists.
 
-## Simplicity
+## Readability & Simplicity
 
 Applies to every line: choose the form a reader parses on sight, and cut what doesn't carry meaning.
 
@@ -185,6 +185,8 @@ type Response = Base & { steps: Step[] }
 
 Mark deferred work with a trackable tag — a ticket id or a date — so it doesn't rot silently: `TODO(PROJ-123): …` or `TODO(2026-02-15): …`.
 
+**The one exception:** All files must have a docstring at the top explaining the purpose of the file and all functions, methods, public variables, and public APIs must have doctrings explaining their purpose. This is *critical* for readability!
+
 ## Dependencies
 
 Every dependency is a liability you don't control — for security, maintenance, and build weight. Add them deliberately.
@@ -227,11 +229,13 @@ Before considering a change complete, confirm each statement holds:
 - [ ] Boundary functions return domain types, not the vendor's raw object.
 - [ ] Every externally-defined shape is referenced from its source rather than re-declared locally.
 
-**Simplicity**
+**Readability & Simplicity**
 
 - [ ] No two functions, blocks, or accumulators differ only by a value or a name.
 - [ ] Every non-obvious construction carries a comment saying why it is needed.
 - [ ] Every comment states why, not what the code already says.
+- [ ] All files have a docstring at the top stating its purpose.
+- [ ] All functions, methods, public variables, and public APIs have a docstring.
 - [ ] No section-divider comment banners.
 - [ ] No single-use types wrapping a function's parameters.
 
