@@ -5,7 +5,7 @@ description: Enforce Python coding standards including PEP 8 compliance, consist
 
 # Python Coding Standards
 
-This skill ensures Python code adheres to professional standards. Apply these standards to all Python code you write or review.
+This skill ensures Python code adheres to professional standards. Apply these standards to all Python code you write or review, on top of the language-agnostic `general-coding-standards.md`.
 
 ## Style Guide
 
@@ -34,84 +34,20 @@ Follow PEP8 with these specific exceptions:
 
 **Line length:** 120 characters (ignore PEP 8 and Black standards for line length)
 
-## Code Organization
-
-**Function length:** Keep functions under 30 lines or cyclomatic complexity of 20 (if available). If longer, break into smaller helper functions.
-
-**Single Responsibility Principle:** Each function/class should have one clear purpose.
-
-**Avoid globals:** Use function parameters and return values. Constants at module level (top of file) and package level (constants.py) are acceptable. Don't use __init__.py for globals.
-
 ## Dependency Management
 
-When adding new dependencies, follow this priority order:
+Follow the general dependency principles in `general-coding-standards.md`. Python specifics:
 
-1. **Python built-in libraries first** - Use standard library modules whenever possible (e.g., `json`, `datetime`, `pathlib`, `collections`, `itertools`, `functools`)
-2. **Open source libraries second** - For functionality not in stdlib, prefer well-maintained open source packages
-3. **Closed source libraries require permission** - Before adding any proprietary or closed source dependency, explicitly ask the user for approval
-
-**Always update `requirements.txt` after adding or updating any dependency:**
+- Prefer the standard library (`json`, `datetime`, `pathlib`, `collections`, `itertools`, `functools`) before reaching for a package.
+- Pin exact versions in `requirements.txt` (`pandas==2.0.1`, not `pandas>=2.0`), and update it after any change:
 
 ```bash
-# After installing a new package
 pip freeze > requirements.txt
 ```
-
-**Dependency best practices:**
-- Pin exact versions in `requirements.txt` for reproducibility (e.g., `pandas==2.0.1` not `pandas>=2.0`)
-- Document why non-obvious dependencies are needed (inline comment in requirements.txt)
-- Avoid adding dependencies for trivial functionality you could implement in 10-20 lines
-- Check package maintenance status (recent commits, active issues, security track record)
-- Prefer packages with minimal transitive dependencies
 
 ## Docstring Standards (Sphinx)
 
 Use docstrings that follow the Sphinx formatting rules
-
-## Comments
-
-Comments should explain *why*, not *what*. The code should be self-explanatory for *what* it does but in the case that it is non-obvious at first glance (to a competent human developer), a comment should be employed.
-
-**Code block comments:** Use code block comments before tricky blocks of code where the context of the block is not immediately obvious.
-
-**Good:**
-```python
-# Use exponential weighting to give more importance to recent observations
-weights = np.exp(-decay_rate * np.arange(n_periods))
-```
-
-**Bad:**
-```python
-# Calculate weights
-weights = np.exp(-decay_rate * np.arange(n_periods))
-```
-
-**Inline comments:** Use inline comments sparingly and only in the case where the context for the line of code is not immediately obvious:**
-
-**Good:**
-```python
-x = x + 1  # Compensate for border
-```
-
-**Bad:**
-```python
-x = x + 1  # Increment x
-```
-
-**TODO comments:** Include ticket number or date:
-```python
-# TODO(PROJ-123): Replace with async implementation when API supports it
-# TODO(2026-02-15): Remove backward compatibility after migration
-```
-
-**Section dividers** It's acceptable to divide sections of code with comments. Use the formatting below. Do not overuse dividers - use only when each section contains more than 10 lines of code.
-```python
-# some code here
-
-# ==== section divider ==== #
-
-# some more code here
-```
 
 ## Logging
 
@@ -144,32 +80,6 @@ def process_transactions(data: pd.DataFrame) -> pd.DataFrame:
 - `ERROR`: Errors that need attention
 - `CRITICAL`: System-level failures
 
-## Testing Hooks
-
-Write code with testability in mind:
-
-**Dependency injection:**
-```python
-def calculate_metrics(
-    data: pd.DataFrame,
-    calculator: Optional[Calculator] = None
-) -> Dict[str, float]:
-    """Calculate performance metrics.
-
-    :param data: Historical price data.
-    :param calculator: Optional calculator instance for testing.
-    :return: Dict of metric names to values.
-    """
-    if calculator is None:
-        calculator = DefaultCalculator()
-
-    return calculator.compute(data)
-```
-
-**Avoid hardcoded values:** Use configuration or parameters instead.
-
-**Pure functions:** Prefer functions without side effects when possible.
-
 ## Standards Checklist
 
 Before submitting code, verify:
@@ -178,8 +88,7 @@ Before submitting code, verify:
 - [ ] Pylint passes (`python -m pylint <file>`) with no warnings or errors
 - [ ] Google style guide followed
 - [ ] PEP 8 compliance (line length, naming, whitespace)
-- [ ] Docstrings, type hints, and appropriate comments present
-- [ ] Code is well organized
+- [ ] Docstrings and type hints present
 - [ ] Logging instead of print statements with error messages including helpful context
 - [ ] `requirements.txt` updated if dependencies changed
 - [ ] All tests still pass (if refactoring)

@@ -20,6 +20,10 @@ Apply this skill when:
 
 Read the appropriate reference file(s) based on your task. Reading multiple files may be necessary if your work involves multiple aspects of development (e.g., both code and tests):
 
+### For Writing or Reviewing Code in Any Language
+
+**Read `references/general-coding-standards.md`** — language-agnostic principles (encapsulation, validation boundaries, deriving over duplicating, pure cores, cutting ceremony). Apply these alongside the language-specific reference below.
+
 ### For Writing or Reviewing Python Code
 
 **Read `references/python-coding-standards.md`**

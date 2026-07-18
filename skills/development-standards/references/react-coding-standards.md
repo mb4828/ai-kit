@@ -5,7 +5,7 @@ description: Enforce React + TypeScript coding standards including strict type s
 
 # React + TypeScript Coding Standards
 
-Apply these standards to all React and TypeScript code you write or review. The goal is type-safe, lint-clean, maintainable components with no runtime surprises.
+Apply these standards to all React and TypeScript code you write or review, on top of the language-agnostic `general-coding-standards.md`. The goal is type-safe, lint-clean, maintainable components with no runtime surprises.
 
 ## Tooling and Gates
 
