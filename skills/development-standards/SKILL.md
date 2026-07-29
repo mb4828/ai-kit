@@ -1,6 +1,6 @@
 ---
 name: development-standards
-description: Enforce coding and testing standards. Use when writing, reviewing, or refactoring code or tests to ensure production-ready quality.
+description: Enforce coding and testing standards. Use when writing, reviewing, or refactoring code or tests or documentation to ensure production-ready quality.
 ---
 
 # Development Standards
@@ -40,9 +40,13 @@ Read the appropriate reference file(s) based on your task. Reading multiple file
 
 **Read `references/react-testing-standards.md`**
 
+### For Writing or Reviewing Technical Documentation, READMEs, PR Descriptions, Error Messages, Release Notes, or Comments
+
+**Read `references/technical-writing-standards.md`**
+
 ## Applying the Standards
 
-1. **Identify your task** - Are you writing code, tests, or both?
+1. **Identify your task** - Are you writing code, tests, documentation, or multiple?
 2. **Read the relevant reference(s)** - Open the appropriate `.md` file(s)
 3. **Apply the standards** - Follow the guidelines while writing
 4. **Use the checklist** - Verify compliance before submitting
