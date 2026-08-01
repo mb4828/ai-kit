@@ -9,6 +9,10 @@ Apply these standards to all React and TypeScript code you write or review, on t
 
 ## Tooling and Gates
 
+### Package Manager
+
+Use Yarn for all dependency and script commands. Do not use `npm` commands.
+
 **Type checking:** `tsc --noEmit` must pass with zero errors. It is part of the build (`tsc --noEmit && vite build`).
 
 **Linting:** ESLint with `typescript-eslint` and `eslint-plugin-react-hooks` (flat config in `eslint.config.js`) must pass with zero problems.
