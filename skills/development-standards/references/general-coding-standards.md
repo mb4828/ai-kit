@@ -150,6 +150,7 @@ Before writing a clever form, look for the plain one the platform already suppor
 
 - Reach for the form a competent reader parses on sight; prefer a named intermediate over a deeply nested one-liner.
 - If the clever form is genuinely required, isolate it behind a name and comment the reason — so no one "simplifies" it back into a bug.
+- Always use braces or indents for `if`, `else`, loop, and `switch` blocks. Do not write one-line control statements without braces.
 
 ### Don't repeat yourself
 
@@ -238,6 +239,7 @@ Before considering a change complete, confirm each statement holds:
 - [ ] All functions, methods, public variables, and public APIs have a docstring.
 - [ ] No section-divider comment banners.
 - [ ] No single-use types wrapping a function's parameters.
+- [ ] Every control-flow block uses braces or indents, including a one-line body.
 
 **Dependencies**
 
